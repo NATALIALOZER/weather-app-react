@@ -37,7 +37,9 @@ export default function Main(props) {
                 <span id="wind-speed"></span>
               </div>
             </div>
-            <a id="convert">Convert to Fahrenheit</a>
+            <a id="convert" href="/">
+              Convert to Fahrenheit
+            </a>
           </div>
           <div className="right">
             <img src={weather} alt="weather" width="100" />

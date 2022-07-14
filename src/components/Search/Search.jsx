@@ -8,13 +8,25 @@ export default function Search(props) {
     props.onChangeCity(inputRef.current.value);
   }
 
+  function detectEnter(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+    }
+  }
+
   return (
     <div className="search-box">
       <form action="" className="form">
         <label htmlFor="cname" className="mt-2">
           city:
         </label>
-        <input type="text" name="city" id="city" ref={inputRef} />
+        <input
+          type="text"
+          name="city"
+          id="city"
+          ref={inputRef}
+          onKeyPress={detectEnter}
+        />
       </form>
       <button id="searchButton" onClick={handleClick}>
         <img
